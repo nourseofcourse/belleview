@@ -1,0 +1,77 @@
+.band {
+  padding: $band-vertical-padding 0;
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: 48px;
+  }
+
+  h1 + p {
+    margin-bottom: 0;
+  }
+}
+
+  .band--small {
+    padding: $band-small-vertical-padding 0;
+  }
+
+  .band--lead {
+    padding-top: 125px;
+  }
+
+  .band--padded {
+    padding: 150px 0 130px;
+  }
+  .band--tint {
+    background-color: $tint;
+  }
+
+  .band--clouds {
+    position: relative;
+
+    &:before {
+      background-image: url(../images/cloud-top.png);
+      background-repeat: no-repeat;
+      height: 558px;
+      width: 100%;
+      
+      content: '';
+      display: block;
+      position: absolute;
+      top: 245px;
+      background-position: right -100px bottom;
+
+      @media (min-width: 1400px) {
+        background-position: right bottom;
+      }
+
+      @media (min-width: 1625px) {
+        background-position: center bottom;
+      }
+    }
+  }
+
+  .band--bay {
+    position: relative;
+    &:before {
+      background-image: url(../images/clouds-bot.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      height: 726px;
+      width: 100%;
+      
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -465px;
+    }
+  }
+
+    .band__headline {
+
+    }
+      .band__headline--contact {
+        margin-bottom: 60px !important;
+      }

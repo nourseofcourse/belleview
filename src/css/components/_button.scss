@@ -1,0 +1,55 @@
+.button {
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+       -o-border-radius: 3px;
+          border-radius: 3px;
+  
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  
+  -webkit-touch-action: manipulation;
+    -moz-touch-action: manipulation;
+     -ms-touch-action: manipulation;
+      -o-touch-action: manipulation;
+         touch-action: manipulation;
+
+  border: 1px solid;
+  padding: 14px 19px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: 0;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+}
+
+  .button--primary {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+
+    &:hover {
+      background-color: $brand-green;
+      border-color: $brand-green;
+      color: #fff;
+    }
+  }
+
+  .button--padded {
+    padding-left: 60px;
+    padding-right: 60px;
+  }

@@ -1,0 +1,40 @@
+.page-head {
+
+}
+
+  .page-head--masthead {
+    background-image: url(../images/belleview-condo.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+
+    height: 381px;
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+      background-image: url(../images/belleview-condo-md.jpg);
+      height: 645px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      background-image: url(../images/belleview-condo-lg.jpg);
+      height: 658px;
+      background-position: top left;
+    }
+
+    @media (min-width: 1600px) {
+      height: 800px;
+    }
+
+    @media (min-width: 1800px) {
+      height: 1000px;
+    }
+  }
+
+  .page-head__content {
+    padding-top: 65px;
+  }
+
+  .page-head__headline {
+    line-height: 44px;
+  }

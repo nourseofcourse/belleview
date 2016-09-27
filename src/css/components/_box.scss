@@ -1,0 +1,17 @@
+.box {
+  background: $tan;
+  text-align: center;
+  padding: 90px 45px;
+}
+
+  .box--outline {
+    border: 1px solid $dark-tan;
+  }
+
+  .box--small {
+    padding: 50px;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding: 50px 25px;
+    }
+  }

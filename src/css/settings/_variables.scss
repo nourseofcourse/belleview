@@ -1,0 +1,28 @@
+$navbar-height: 83px;
+$navbar-default-bg: $navbar-color;
+$navbar-default-color: $brand-primary;
+$navbar-default-link-color: $brand-primary;
+$navbar-default-link-hover-color: $brand-green;
+
+$navbar-padding-vertical: 30px;
+$navbar-brand-padding-vertical: 13px;
+
+$font-size-base: 16px;
+$font-family-serif: "Cardo", Georgia, "Times New Roman", Times, serif;
+$font-family-base: $font-family-serif;
+
+$text-color: $text;
+$link-hover-color: $brand-green;
+
+$band-vertical-padding: 75px;
+$band-small-vertical-padding: 70px;
+
+$font-size-h1: 36px;
+$font-size-h2: 34px;
+$font-size-h3: 30px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+$font-size-h6: 16px;
+
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-md-min;

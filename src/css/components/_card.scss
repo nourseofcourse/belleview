@@ -1,0 +1,33 @@
+.card {
+
+  display: inline-block;
+  float: left;
+  width: 32.333333333%;
+}
+
+  .card--middle {
+    margin: 0 1.5%;
+  }
+
+    .card__body {
+      background: $brand-primary;
+      color: #fff;
+
+      padding: 25px;
+    }
+
+    .card__title {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+      .card__title--single {
+        word-spacing: 10000px;
+      }
+
+    .card__title-desc {
+      font-size: 18px;
+      line-height: 27px;
+      font-style: italic;
+      margin: 0;
+    }
