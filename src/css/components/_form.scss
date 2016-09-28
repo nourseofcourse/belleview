@@ -3,8 +3,9 @@
 }
 
     .form__input {
-      border-color: #999999;
+      border-color: #CCCCCC;
       border-radius: 0;
+      padding: 9px 12px;
 
       &:focus,
       &:active {
@@ -16,11 +17,19 @@
 
     .form__label {
       font-weight: 400;
-      font-size: 12px;
+      font-size: 14px;
+      line-height: 19px;
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 5px;
+      color: #9B9B9B;
     }
 
     .form__textarea {
       @media (max-width: $screen-md-max) {
         height: 75px;
       }
+    }
+
+    .form__group {
+      margin-bottom: 18px;
     }
