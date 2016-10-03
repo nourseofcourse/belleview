@@ -1,19 +1,11 @@
 .card {
 
-  display: inline-block;
-  float: left;
-  width: 32.333333333%;
 }
 
-  .card--middle {
-    margin: 0 1.5%;
-  }
-
     .card__body {
-      background: $brand-primary;
-      color: #fff;
+      background: $tan;
 
-      padding: 25px;
+      padding: 37px 25px;
     }
 
     .card__title {

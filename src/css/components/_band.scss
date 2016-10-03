@@ -13,12 +13,18 @@
   }
 }
 
+
   .band--small {
     padding: $band-small-vertical-padding 0;
   }
 
   .band--lead {
     padding-top: 125px;
+  }
+
+  .band--nopad {
+    padding-top: 8px;
+    padding-bottom: 0;
   }
 
   .band--padded {
@@ -75,3 +81,14 @@
       .band__headline--contact {
         margin-bottom: 60px !important;
       }
+  
+    .band__2col {
+      &:first-child {
+        padding-left: 0;
+        padding-right: 3px;
+      }
+      &:last-child {
+        padding-right: 0;
+        padding-left: 3px;
+      }
+    }

@@ -1,0 +1,16 @@
+
+  .product__image {
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    height: 400px;
+    width: 100%;
+  }
+    .product__image--midrise {
+      background-image: url(../images/midrise-residences.jpg);
+    }
+
+    .product__image--carriage {
+      background-image: url(../images/carriage-homes.jpg);
+      background-position: center center;
+    }
