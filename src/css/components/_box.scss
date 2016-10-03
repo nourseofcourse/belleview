@@ -15,3 +15,17 @@
       padding: 50px 25px;
     }
   }
+
+  .box--fixed {
+    max-width: 380px;
+
+    &:before {
+      content: '';
+      background-image: url(../images/temp/setting-temp.jpg);
+      width: 540px;
+      height: auto;
+      display: block;
+      position: absolute;
+      
+    }
+  }

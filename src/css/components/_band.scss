@@ -18,13 +18,18 @@
     padding: $band-small-vertical-padding 0;
   }
 
-  .band--lead {
-    padding-top: 125px;
-  }
 
   .band--nopad {
     padding-top: 8px;
     padding-bottom: 0;
+  }
+
+  .band--gallary {
+    padding: 45px 0;
+  }
+
+   .band--lead {
+    padding-top: 100px;
   }
 
   .band--padded {
