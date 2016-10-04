@@ -23,3 +23,17 @@
       font-style: italic;
       margin: 0;
     }
+
+    .card__link {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-family: 'Roboto';
+      color: #23408F;
+
+      &:hover {
+        color: $brand-primary;
+        text-decoration: none;
+      }
+    }
