@@ -51,17 +51,21 @@
       content: '';
       display: block;
       position: absolute;
-      top: 245px;
-      background-position: right -100px bottom;
+      top: 390px;
+      background-position: left bottom;
 
       @media (min-width: 1400px) {
-        background-position: right bottom;
+        background-position: left bottom;
       }
 
       @media (min-width: 1625px) {
-        background-position: center bottom;
+        background-position: left bottom;
       }
     }
+  }
+
+  .band--foot {
+    padding-top: 400px;
   }
 
   .band--bay {
@@ -70,13 +74,13 @@
       background-image: url(../images/clouds-bot.png);
       background-repeat: no-repeat;
       background-position: center bottom;
-      height: 726px;
+      height: 578px;
       width: 100%;
       
       content: '';
       display: block;
       position: absolute;
-      bottom: -465px;
+      top: 200px;
     }
   }
 
