@@ -39,6 +39,10 @@
   .band--nopad {
     padding-top: 8px;
     padding-bottom: 0;
+
+    @media(max-width: $screen-xs-max) {
+      padding-top: 2px;
+    }
   }
 
   .band--gallary {
@@ -109,12 +113,15 @@
       }
   
     .band__2col {
-      &:first-child {
-        padding-left: 0;
-        padding-right: 3px;
-      }
-      &:last-child {
-        padding-right: 0;
-        padding-left: 3px;
+      padding: 2px 4px;
+      @media(min-width: $screen-sm-min)  {
+        &:first-child {
+          padding-left: 0;
+          padding-right: 3px;
+        }
+        &:last-child {
+          padding-right: 0;
+          padding-left: 3px;
+        }
       }
     }

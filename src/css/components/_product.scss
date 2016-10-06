@@ -7,15 +7,15 @@
     width: 100%;
 
     @media(max-width: $screen-xs-max)  {
-      max-height: 271px;
+      max-height: 200px;
     }
   }
     .product__image--midrise {
       background-image: url(../images/midrise-residences.jpg);
       @media(max-width: $screen-xs-max)  {
         background-image: url(../images/midrise-residences-mobile.jpg);
-        background-size: 376px 271px;
-      }
+        background-size: 376px 200px;
+      } 
     }
 
     .product__image--carriage {
@@ -23,6 +23,6 @@
       background-position: center center;
       @media(max-width: $screen-xs-max)  {
         background-image: url(../images/carriage-homes-mobile.jpg);
-        background-size: 376px 271px;
+        background-size: 376px 200px;
       }
     }
