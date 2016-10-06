@@ -94,6 +94,13 @@
       @media (min-width: 1625px) {
         background-position: left bottom;
       }
+      @media (max-width: $screen-xs-max) {
+        background-image: url(../images/cloud-top-mobile.png);
+        height: 162px;
+        background-size: 383px 162px;
+        background-position: center center;
+        top: 320px;
+      }
     }
   }
 
@@ -114,6 +121,11 @@
       display: block;
       position: absolute;
       top: 200px;
+
+      @media (max-width: $screen-xs-max) {
+        background-image: url(../images/cloud-bot-mobile.png);
+        height: 155px;
+      }
     }
   }
 
