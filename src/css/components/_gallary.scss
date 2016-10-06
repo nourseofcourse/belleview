@@ -3,6 +3,9 @@
 }
   .gallary__image {
     margin-top: 120px;
+    @media (max-width: $screen-xs-max) {
+      margin-top: 145px;
+    }
   }
 
   .gallary__desc {
@@ -13,27 +16,27 @@
 
     .gallary__desc--right {
       right: 155px;
-      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @media (max-width: $screen-sm-max) {
         right: 0;
       }
     }
 
     .gallary__desc--left {
       left: 155px;
-      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @media (max-width: $screen-sm-max) {
         left: 0;
       }
     }
 
   .gallary__helper--right {
-    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    @media (max-width: $screen-md-max) {
       position: absolute;
       right: 0;
     }
   }
 
   .gallary__helper--left {
-    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    @media (max-width: $screen-md-max) {
       position: absolute;
       left: 0;
     }

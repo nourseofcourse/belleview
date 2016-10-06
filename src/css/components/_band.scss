@@ -47,14 +47,26 @@
 
   .band--gallary {
     padding: 45px 0;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 22px 0;
+    }
   }
 
    .band--lead {
     padding-top: 100px;
+
+    @media (max-width: $screen-xs-max) {
+      padding-top: 50px;
+    }
   }
 
   .band--padded {
     padding: 150px 0 130px;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 75px 0 65px;
+    }
   }
   .band--tint {
     background-color: $tint;
