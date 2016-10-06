@@ -3,12 +3,11 @@
 }
 
   .page-head--masthead {
-    background-image: url(../images/belleview-condo.jpg);
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: cover;
 
-    height: 381px;
+    height: auto;
     width: 100%;
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {

@@ -1,6 +1,8 @@
 body {
   margin-top: $navbar-height;
 
+  
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,4 +79,35 @@ p {
   left: -100px;
   top: -80px;
 }
+
+@media (max-width: $screen-xs-max) {
+  body {
+    margin-top: 30px;
+  }
+  h1 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  p {
+    font-size: 8px;
+    line-height: 13px;
+  }
+
+  .navbar {
+    height: 30px;
+    min-height: 30px;
+  }
+
+  .navbar-brand {
+    height: 18px;
+    padding: 5px 15px;
+    img {
+      height: 18px;
+      width: auto;
+    }
+  }
+}
+
+
 

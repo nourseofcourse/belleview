@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8"> <!-- needs to be included within first 512 characters of document, omit trailing slash-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Bellview</title>
 	<meta name="description" content="Semantic HTML5"> <!-- omit trailing slash for elements with no content -->
@@ -29,12 +30,7 @@
 	<nav role="navigation" class="navbar  navbar-default  navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+				
 				<a class="navbar-brand" href="#">
 					<img src="assets/images/belleview-logo.png" alt="Bellview">
 				</a>
@@ -52,7 +48,7 @@
 		</div>
 	</nav>
 	<header class="page-head  page-head--masthead" role="banner">
-		<div class="page-head__content">
+		<div class="page-head__content  hidden-xs">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4  col-md-5  col-sm-6  hidden-xs">
@@ -68,6 +64,7 @@
 				</div>
 			</div>
 		</div>
+		<img src="assets/images/belleview-condo.jpg" class="img-responsive  hidden-sm  hidden-md  hidden-lg">
 	</header>
 	<main class="content" role="main">
 		<section class="band  band--small  band--tint" data-ui-component="About">
@@ -76,6 +73,7 @@
 					<div class="col-md-8  col-md-offset-2">
 						<h1 clas="band__headline">A new lifestyle of historic proportions</h1>
 						<p>A new gated community of just 132 luxury condos and carriage homes, Belleview Place re-introduces the gracious living of the iconic Belleview Biltmore Hotel that once claimed this site. Set 35 feet above Clearwater Harbor and a few short steps from the Belleair Golf and Country Club. A seamless blend of historic refinement and contemporary Florida living, from a builder with a track record of excellence.</p>
+						<a href="#contact" data-plugin="scrollTo" class="button  button--primary  hidden-sm  hidden-md  hidden-lg">request tour</a>
 					</div>
 				</div>
 			</div>
@@ -108,7 +106,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="band  band--light  band--gallary  band--lead" id="setting">
+		<!--<section class="band  band--light  band--gallary  band--lead" id="setting">
 			<div class="container">
 				<div class="row  gallary">
 					<div class="col-lg-6  col-lg-offset-2  col-md-7  col-md-offset-1  col-sm-9  col-sm-offset-0">
@@ -121,7 +119,6 @@
 							</div>
 							<div class="box__body">
 								<p>With less than two square miles of buildable land, Belleair, Fla., maintains a character of prestige and luxury homes, and is now home to Belleview Place. So private, yet minutes to everything Clearwater and Tampa Bay.</p>
-								<!--<a href="#" class="block__link  text-uppercase">Explore the Area</a>-->
 							</div>
 						</div>
 					</div>
@@ -138,7 +135,6 @@
 							</div>
 							<div class="box__body">
 								<p>With less than two square miles of buildable land, Belleair, Fla., maintains a character of prestige and luxury homes, and is now home to Belleview Place. So private, yet minutes to everything Clearwater and Tampa Bay.</p>
-								<!--<a href="#" class="block__link  text-uppercase">Explore the Area</a>-->
 							</div>
 						</div>
 					</div>
@@ -161,7 +157,6 @@
 							</div>
 							<div class="box__body">
 								<p>Condominium and Carriage Homes with open floor plans, spacious master suites and private terraces, plus generous choices for fine finishes — so your home is unique to your style and personality. </p>
-								<!--<a href="#" class="block__link  text-uppercase">Explore the Area</a>-->
 							</div>
 						</div>
 					</div>
@@ -178,7 +173,6 @@
 							</div>
 							<div class="box__body">
 								<p>Taking our cue from the historic hotel that once settled on this site, we’ve opened the door to carefree living, with ample time for family friends and a wide array of entertaining amenities.</p>
-								<!--<a href="#" class="block__link  text-uppercase">Explore the Area</a>-->
 							</div>
 						</div>
 					</div>
@@ -187,7 +181,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<section class="band  band--bay">
 			<div class="container">
 				<div class="row">

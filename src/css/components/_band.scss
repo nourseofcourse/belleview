@@ -6,16 +6,33 @@
     margin-top: 0;
     margin-bottom: 25px;
     line-height: 48px;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 15px;
+      line-height: 22px;
+    }
   }
 
   h1 + p {
     margin-bottom: 0;
+    + .button {
+      margin-top: 15px;
+    }
   }
 }
 
 
   .band--small {
     padding: $band-small-vertical-padding 0;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 30px 0;
+
+      p {
+        max-width: 342px;
+        margin: 0 auto;
+      }
+    }
   }
 
 

@@ -36,6 +36,17 @@
     text-decoration: none;
   }
 
+  @media (max-width: $screen-xs-max) {
+    padding: 7px 10px;
+    font-size: 7px;
+
+    -webkit-border-radius: 1.5px;
+     -moz-border-radius: 1.5px;
+      -ms-border-radius: 1.5px;
+       -o-border-radius: 1.5px;
+          border-radius: 1.5px;
+  }
+
 }
 
   .button--primary {
