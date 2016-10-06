@@ -4,7 +4,7 @@
 
   .page-head--masthead {
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: bottom right;
     background-size: cover;
 
     height: auto;
@@ -36,4 +36,5 @@
 
   .page-head__headline {
     line-height: 44px;
+    margin-top: 0;
   }
