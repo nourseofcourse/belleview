@@ -30,7 +30,11 @@
 	<nav role="navigation" class="navbar  navbar-default  navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				
+				<div class="button_container  hidden-md  hidden-lg navbar-toggle collapsed" id="toggle">
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
+				</div>
 				<a class="navbar-brand" href="#">
 					<img src="assets/images/belleview-logo.png" alt="Bellview">
 				</a>
@@ -40,7 +44,7 @@
 					<li><a href="#setting" data-plugin="scrollTo">location</a></li>
 					<li><a href="#cards" data-plugin="scrollTo">residences</a></li>
 					<li><a href="#style" data-plugin="scrollTo">amenities</a></li>
-					<li><a href="#cards" data-plugin="scrollTo">inn</a></li>
+					<li><a href="#the-inn" data-plugin="scrollTo">inn</a></li>
 					<li><a href="#contact" data-plugin="scrollTo">contact us</a></li>
 					<!--<li><span class="navbar-btn"><a href="" class="button  button--primary   button--outline  button--padded"></a></span></li>-->
 				</ul>
@@ -103,7 +107,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="hidden-sm  hidden-md  hidden-lg">
+					<div class="hidden-sm  hidden-md  hidden-lg" id="setting-mobile">
 						<div class="col-sm-6  band__2col">
 							<div class="card ">
 								<div class="card__object  product">
@@ -116,7 +120,7 @@
 							</div>
 						</div>
 
-						<div class="col-sm-6  band__2col">
+						<div class="col-sm-6  band__2col" id="style-mobile">
 							<div class="card ">
 								<div class="card__object  product">
 									<div class="product__image  product__image--style"></div>
@@ -140,7 +144,7 @@
 							</div>
 						</div>
 
-						<div class="col-sm-6  band__2col">
+						<div class="col-sm-6  band__2col" id="inn-mobile">
 							<div class="card ">
 								<div class="card__object  product">
 									<div class="product__image  product__image--inn"></div>
@@ -212,7 +216,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="band  band--light  band--clouds  band--gallary" id="style">
+		<section class="band  band--light  band--clouds  band--gallary" id="the-inn">
 			<div class="container hidden-xs">
 				<div class="row  gallary">
 					<div class="col-lg-4  col-md-5  col-sm-7  gallary__helper--left">
@@ -302,6 +306,18 @@
 		</div>
 	</footer>
 
+<div class="overlay" id="overlay">
+  <nav class="overlay-menu">
+    <ul>
+      <li><a href="#setting-mobile" data-plugin="scrollTo">location</a></li>
+			<li><a href="#cards" data-plugin="scrollTo">residences</a></li>
+			<li><a href="#style-mobile" data-plugin="scrollTo">amenities</a></li>
+			<li><a href="#inn-mobile" data-plugin="scrollTo">inn</a></li>
+			<li><a href="#contact" data-plugin="scrollTo">contact us</a></li>
+    </ul>
+  </nav>
+</div>
+
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> <!-- drop type attribute -->
 	<script src="assets/js/matchHeight.js"></script> <!-- drop type attribute -->
@@ -368,6 +384,15 @@
 
 			
 			});
+
+			$('#toggle').click(function() {
+   			$(this).toggleClass('active');
+   			$('#overlay').toggleClass('open');
+  		});
+			$('#overlay a').bind('click touch', function() {
+					$('#overlay').toggleClass('open');
+					$('#toggle').toggleClass('active');
+				});
 		}();
 	</script>
 </body>
