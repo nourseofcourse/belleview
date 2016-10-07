@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
 }
+
 a,
 .button {
   -webkit-transition: color .2s linear;
@@ -42,6 +43,13 @@ p {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.navbar-brand {
+  > img {
+    width: 200px; 
+    height: auto;
+  }
 }
 
 .setting-position {
@@ -82,33 +90,33 @@ p {
 
 @media (max-width: $screen-xs-max) {
   body {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   h1 {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 28px;
+    line-height: 32px;
   }
 
   h2 {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 28px;
+    line-height: 32px;
   }
 
   p {
-    font-size: 8px;
-    line-height: 13px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .navbar {
-    height: 30px;
-    min-height: 30px;
+    height: 50px;
+    min-height: 50px;
   }
 
   .navbar-brand {
-    height: 18px;
+    height: 38px;
     padding: 5px 15px;
     img {
-      height: 18px;
+      height: 38px;
       width: auto;
     }
   }

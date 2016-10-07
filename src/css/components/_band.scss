@@ -13,14 +13,14 @@
 
     @media (max-width: $screen-xs-max) {
       margin-bottom: 15px;
-      line-height: 22px;
+      line-height: 32px;
     }
   }
 
   h1 + p {
     margin-bottom: 0;
     + .button {
-      margin-top: 15px;
+      margin-top: 25px;
     }
   }
 }
@@ -30,10 +30,9 @@
     padding: $band-small-vertical-padding 0;
 
     @media (max-width: $screen-xs-max) {
-      padding: 30px 0;
+      padding: 50px 0;
 
       p {
-        max-width: 342px;
         margin: 0 auto;
       }
     }
@@ -107,7 +106,7 @@
         height: 162px;
         background-size: 383px 162px;
         background-position: center center;
-        top: 320px;
+        top: -25px;
       }
     }
   }
@@ -139,7 +138,7 @@
         height: 155px;
         background-size: 383px 155px;
         background-position: center center;
-        top: 150px;
+        top: 220px;
       }
     }
   }

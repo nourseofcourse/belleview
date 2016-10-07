@@ -1,4 +1,9 @@
-
+.product {
+  @media(max-width: $screen-xs-max)  {
+    height: 195px;
+    overflow: hidden;
+  }
+}
   .product__image {
     background-position: top center;
     background-repeat: no-repeat;
@@ -7,14 +12,14 @@
     width: 100%;
 
     @media(max-width: $screen-xs-max)  {
-      max-height: 200px;
+      height: 100%;
     }
   }
     .product__image--midrise {
       background-image: url(../images/midrise-residences.jpg);
       @media(max-width: $screen-xs-max)  {
         background-image: url(../images/midrise-residences-mobile.jpg);
-        background-size: 376px 200px;
+        background-size: cover;
       } 
     }
 
@@ -23,6 +28,34 @@
       background-position: center center;
       @media(max-width: $screen-xs-max)  {
         background-image: url(../images/carriage-homes-mobile.jpg);
-        background-size: 376px 200px;
+        background-size: cover;
+      }
+    }
+
+    .product__image--setting {
+      @media(max-width: $screen-xs-max)  {
+        background-image: url(../images/temp/setting-mobile.jpg);
+        background-size: cover;
+      }
+    }
+
+    .product__image--style {
+      @media(max-width: $screen-xs-max)  {
+        background-image: url(../images/temp/style-mobile.jpg);
+        background-size: cover;
+      }
+    }
+
+    .product__image--space {
+      @media(max-width: $screen-xs-max)  {
+        background-image: url(../images/temp/space-mobile.jpg);
+        background-size: cover;
+      }
+    }
+
+    .product__image--inn {
+      @media(max-width: $screen-xs-max)  {
+        background-image: url(../images/temp/inn-mobile.jpg);
+        background-size: cover;
       }
     }
