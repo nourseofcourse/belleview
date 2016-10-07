@@ -1,33 +1,46 @@
 .contact {
   background-color: $light;
   border: 1px solid $light-border-color;
+  clear: both;
+	overflow: hidden;
 }
 
     .contact__body {
-      padding: 0 90px;
+      padding: 84px 90px;
       text-align: left;
 
+      width: 50%;
+			float: left;
+
       @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-        padding: 0 30px;
+        padding: 84px 30px;
       }
       @media (max-width: $screen-sm-max) {
-        padding: 30px;
+        padding: 84px 150px;
+        width: 100%;
+        display: block;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        padding: 40px 40px;
       }
     }
 
-    .contact__image {
+    .contact__map {
+      width: 50%;
+			float: left;
+
       @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-        img {
-          max-width: 450px;
-        }
+        
       }
       @media (max-width: $screen-sm-max) {
         padding-left: 0;
         display: block;
         width: 100%;
-
-        img {
-          margin: 0 auto;
-        }
       }
     }
+
+#map {
+	height: 500px;
+	width: 500px;
+}
