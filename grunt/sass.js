@@ -8,8 +8,8 @@ module.exports = function () {
 				'sourcemap': 'auto', // allow browser to map generated CSS
         'precision': 7, // help avoid rounding errors
       },
-			src: '<%= config.source.sass %>/1face.scss',
-      dest: '<%= config.app %>/<%= config.destination.css %>/1face.css',
+			src: '<%= config.source.sass %>/site.scss',
+      dest: '<%= config.app %>/<%= config.destination.css %>/site.css',
     },
   };
 };

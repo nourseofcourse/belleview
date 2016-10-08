@@ -16,9 +16,9 @@ if( !empty( $email ) && !empty( $lastName ) && !empty( $firstName ) ) {
   $mail = new PHPMailer;
   $mail->setFrom('mocon66@gmail.com', 'Mario Ocon');
   $mail->addReplyTo($email, $firstName . ' ' . $lastName);
-  //$mail->addAddress('claudia@jmcdev.com');
+  $mail->addAddress('claudia@jmcdev.com');
   $mail->addAddress('mocon66@gmail.com');
-  //$mail->addAddress('agage@jmcdev.com');
+  $mail->addAddress('agage@jmcdev.com');
 
   $mail->Subject = 'Belleview Contact Form';
    $content = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
