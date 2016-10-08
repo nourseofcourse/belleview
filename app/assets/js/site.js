@@ -102,7 +102,7 @@ $w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}
 					var lname = $('#last-name').val();
 					var comment = $('#comment').val();
 					var button = $(this).find('button');
-					var endpoint = '/lib/submit.php';
+					var endpoint = window.location.protocol + window.location.hostname + '/lib/submit.php';
 					$.ajax({
 						url: endpoint,
 						type: 'post',
