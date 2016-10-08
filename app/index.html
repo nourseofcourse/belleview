@@ -159,6 +159,46 @@
 				</div>
 			</div>
 		</section>
+		<section class="band  band--light">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="card ">
+							<div class="card__object  product">
+								<div class="product__image  product__image--setting"></div>
+							</div>
+							<div class="card__body">
+								<h2 class="card__title">The setting</h2>
+								<p>With less than two square miles of buildable land, Belleair, Fla., maintains a character of prestige and luxury homes, and is now home to Belleview Place. So private, yet minutes to everything Clearwater and Tampa Bay.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4" id="style-mobile">
+						<div class="card ">
+							<div class="card__object  product">
+								<div class="product__image  product__image--style"></div>
+							</div>
+							<div class="card__body">
+								<h2 class="card__title">Life with style</h2>
+								<p>With less than two square miles of buildable land, Belleair, Fla., maintains a character of prestige and luxury homes, and is now home to Belleview Place. So private, yet minutes to everything Clearwater and Tampa Bay.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4  band__2col">
+							<div class="card ">
+								<div class="card__object  product">
+									<div class="product__image  product__image--space"></div>
+								</div>
+								<div class="card__body">
+									<h2 class="card__title">Personal space</h2>
+									<p>Condominium and Carriage Homes with open floor plans, spacious master suites and private terraces, plus generous choices for fine finishes — so your home is unique to your style and personality. </p>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</section>
 		<section class="band  band--light  band--gallary  band--lead  hidden-xs" id="setting">
 			<div class="container">
 				<div class="row  gallary">
@@ -264,18 +304,18 @@
 						<h1 class="band__headline  band__headline--contact">Come enjoy the views!</h1>
 						<div class="contact">
 							<div class="contact__body" data-mh="contact">		
-								<form class="form  form--contact">
+								<form class="form  form--contact" method="POST">
 									<div class="form__group">
-										<label class="form__label" for="first-name">First Name</label>
-										<input type="text" class="form-control  form__input" id="first-name">
+										<label class="form__label" for="first-name">First Name *</label>
+										<input type="text" class="form-control  form__input" id="first-name" required>
 									</div>
 									<div class="form__group">
-										<label class="form__label" for="first-name">Last Name</label>
-										<input type="text" class="form-control  form__input" id="last-name">
+										<label class="form__label" for="first-name">Last Name *</label>
+										<input type="text" class="form-control  form__input" id="last-name" required>
 									</div>
 									<div class="form__group">
 										<label class="form__label" for="first-name">Email Address *</label>
-										<input type="email" class="form-control  form__input" id="email">
+										<input type="email" class="form-control  form__input" id="email" required>
 									</div>
 									<div class="form__group">
 										<label class="form__label" for="first-name">Comments/Enquiries</label>
@@ -300,7 +340,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<p class="site-foot__text"><a href="http://jmccommunities.com/index.html" target="_blank"><img src="assets/images/temp/jmc-logo.jpg" class="mb20  center-block" ></a>Belleview Place 275 &nbsp;|&nbsp;  Belleview Boulevard Belleair  &nbsp;|&nbsp;  FL 33756  &nbsp;|&nbsp;  <a href="tel:7274697070">727 469 7070</a>  &nbsp;|&nbsp;  <a href="mailto:info@bellviewplace.com">info@belleviewplace.com</a>  &nbsp;|&nbsp;  <a href="https://www.facebook.com/belleviewflorida/">Follow us on Facebook</a></p>
+					<p class="site-foot__text"><a href="http://jmccommunities.com/index.html" target="_blank"><img src="assets/images/temp/jmc-logo.jpg" class="mb20  center-block" ></a>Belleview Place &nbsp;|&nbsp;  275 Belleview Boulevard  &nbsp;|&nbsp;  Belleair, FL 33756  &nbsp;|&nbsp;  <a href="tel:7274697070">727 469 7070</a>  &nbsp;|&nbsp;  <a href="mailto:info@bellviewplace.com">info@belleviewplace.com</a>  &nbsp;|&nbsp;  <a href="https://www.facebook.com/belleviewflorida/">Follow us on Facebook</a></p>
 				</div>
 			</div>
 		</div>
@@ -392,6 +432,45 @@
 			$('#overlay a').bind('click touch', function() {
 					$('#overlay').toggleClass('open');
 					$('#toggle').toggleClass('active');
+				});
+
+				function validateEmail(email) {
+					var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+					return re.test(email);
+				}
+
+				$('.form--contact').on('submit', function(e) {
+					e.preventDefault();
+					var email = $('#email').val();
+					var fname = $('#first-name').val();
+					var lname = $('#last-name').val();
+					var comment = $('#comment').val();
+					var button = $(this).find('button');
+					var endpoint = '/belleview/lib/submit.php';
+					$.ajax({
+						url: endpoint,
+						type: 'post',
+						data: {
+							email: email,
+							fname: fname,
+							lname: lname,
+							comment: comment
+						},
+						beforeSend: function() {
+							button.attr('disabled', true);
+						},
+						success: function( response ) {
+							if(response.success) {
+								$('.form--contact').fadeOut( function() {
+									$('.contact__body').prepend('<div class="vcenter  vcenter--full"><div class="vcenter__content"><h2 class="text-center" style="margin: 0;">' + response.message + '</h2></div></div>');
+								});
+							
+							}
+						},
+						complete: function() {
+							button.attr('disabled', false);
+						}
+					});
 				});
 		}();
 	</script>

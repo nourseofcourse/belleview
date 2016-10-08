@@ -33,24 +33,24 @@
     }
 
     .product__image--setting {
-      @media(max-width: $screen-xs-max)  {
+      //@media(max-width: $screen-xs-max)  {
         background-image: url(../images/temp/setting-mobile.jpg);
         background-size: cover;
-      }
+      //}
     }
 
     .product__image--style {
-      @media(max-width: $screen-xs-max)  {
+      //@media(max-width: $screen-xs-max)  {
         background-image: url(../images/temp/style-mobile.jpg);
         background-size: cover;
-      }
+      //}
     }
 
     .product__image--space {
-      @media(max-width: $screen-xs-max)  {
+      //@media(max-width: $screen-xs-max)  {
         background-image: url(../images/temp/space-mobile.jpg);
         background-size: cover;
-      }
+      //} 
     }
 
     .product__image--inn {
