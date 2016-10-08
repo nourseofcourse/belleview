@@ -2,10 +2,7 @@
   position: relative;
 }
   .gallary__image {
-    margin-top: 120px;
-    @media (max-width: $screen-xs-max) {
-      margin-top: 145px;
-    }
+
   }
 
   .gallary__desc {

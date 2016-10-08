@@ -48,6 +48,11 @@
     }
   }
 
+  .band__text--max {
+    max-width: 770px;
+    margin: 0 auto;
+  }
+
   .band--gallary {
     padding: 45px 0;
 
@@ -91,7 +96,7 @@
       content: '';
       display: block;
       position: absolute;
-      top: 390px;
+      bottom: -270px;
       background-position: left bottom;
 
       @media (min-width: 1400px) {
