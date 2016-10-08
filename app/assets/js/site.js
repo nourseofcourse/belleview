@@ -21,6 +21,8 @@ return this};matchHeight._applyDataApi=function(){var groups={};$('[data-match-h
 $.each(matchHeight._groups,function(){matchHeight._apply(this.elements,this.options)});if(matchHeight._afterUpdate){matchHeight._afterUpdate(event,matchHeight._groups)}};matchHeight._update=function(throttle,event){if(event&&event.type==='resize'){var windowWidth=$(window).width();if(windowWidth===_previousResizeWidth){return}
 _previousResizeWidth=windowWidth}
 if(!throttle){_update(event)}else if(_updateTimeout===-1){_updateTimeout=setTimeout(function(){_update(event);_updateTimeout=-1},matchHeight._throttle)}};$(matchHeight._applyDataApi);$(window).bind('load',function(event){matchHeight._update(!1,event)});$(window).bind('resize orientationchange',function(event){matchHeight._update(!0,event)})})
+!function($){$.fn.unveil=function(threshold,callback){var $w=$(window),th=threshold||0,retina=window.devicePixelRatio>1,attrib=retina?"data-src-retina":"data-src",images=this,loaded;this.one("unveil",function(){var source=this.getAttribute(attrib);source=source||this.getAttribute("data-src");if(source){this.setAttribute("src",source);if(typeof callback==="function")callback.call(this)}});function unveil(){var inview=images.filter(function(){var $e=$(this);if($e.is(":hidden"))return;var wt=$w.scrollTop(),wb=wt+$w.height(),et=$e.offset().top,eb=et+$e.height();return eb>=wt-th&&et<=wb+th});loaded=inview.trigger("unveil");images=images.not(loaded)}
+$w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}(window.jQuery||window.Zepto)
 	!function() {
 			 // When the window has finished loading create our google map below
             google.maps.event.addDomListener(window, 'load', init);
@@ -126,4 +128,6 @@ if(!throttle){_update(event)}else if(_updateTimeout===-1){_updateTimeout=setTime
 						}
 					});
 				});
+
+        $("img.lazy").unveil(300);
 		}();
