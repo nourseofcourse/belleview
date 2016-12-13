@@ -39,6 +39,22 @@
       //}
     }
 
+    .product__image--pour {
+      //@media(max-width: $screen-xs-max)  {
+        background-image: url(../images/temp/pour-mobile.jpg);
+        background-size: cover;
+        background-position: center center;
+      //}
+    }
+
+    .product__image--move {
+      //@media(max-width: $screen-xs-max)  {
+        background-image: url(../images/temp/move-mobile.jpg);
+        background-size: cover;
+        background-position: center center;
+      //}
+    }
+
     .product__image--style {
       //@media(max-width: $screen-xs-max)  {
         background-image: url(../images/temp/style-mobile.jpg);
