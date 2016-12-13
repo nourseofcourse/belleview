@@ -4,7 +4,7 @@
 
   .page-head--masthead {
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: top center;
     background-size: cover;
 
     height: auto;
@@ -12,21 +12,21 @@
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
       background-image: url(../images/belleview-condo-md.jpg);
-      height: 645px;
+      height: 586px;
     }
 
     @media (min-width: $screen-lg-min) {
       background-image: url(../images/belleview-condo-lg.jpg);
-      height: 827px;
-      background-position: bottom right;
+      height: 652px;
+      background-position: top center;
     }
 
     @media (min-width: 1600px) {
-      height: 900px;
+      height: 800px;
     }
 
     @media (min-width: 1800px) {
-      height: 1000px;
+      height: 900px;
     }
   }
 
