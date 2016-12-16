@@ -19,7 +19,8 @@
 
   h1 + p {
     margin-bottom: 0;
-    + .button {
+    + .button,
+    + .button + .button {
       margin-top: 25px;
     }
   }

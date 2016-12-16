@@ -32,7 +32,7 @@ $w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}
                 // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
                 var mapOptions = {
                     // How zoomed in you want the map to start at (always required)
-                    zoom: 11,
+                    zoom: 12,
 										scrollwheel: false,
 										draggable: false,
                     // The latitude and longitude to center the map (always required)
@@ -94,6 +94,17 @@ $w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}
 					var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 					return re.test(email);
 				}
+
+        $(window).load(function() {
+          var hash = location.hash.replace('#', '');
+
+          if(hash != '') {
+            $('html, body').animate({
+              scrollTop: $('#' + hash).offset().top - 60
+            }, 1000);
+            
+          }
+        });
 
 				$('.form--contact').on('submit', function(e) {
 					e.preventDefault();

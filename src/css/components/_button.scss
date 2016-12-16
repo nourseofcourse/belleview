@@ -49,6 +49,15 @@
 
 }
 
+  .button--inline {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+
   .button--primary {
     background-color: $brand-primary;
     border-color: $brand-primary;
@@ -56,6 +65,20 @@
     &:hover {
       background-color: $brand-green;
       border-color: $brand-green;
+      color: #fff;
+    }
+  }
+
+  .button--outline {
+    background-color: transparent;
+
+    &.button--primary {
+      color: $brand-primary;
+    }
+
+    &:hover {
+      border-color: $brand-green;
+      background-color: $brand-green;
       color: #fff;
     }
   }
