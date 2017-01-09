@@ -17,7 +17,8 @@
     "fonts": "src/fonts",
     "vendor": "src/vendor",
     "skins": "src/skins",
-    "examples": "src/examples"
+    "examples": "src/examples",
+    "template": "src/template"
   },
   "env": {
     "dev": "http://vanilla/",

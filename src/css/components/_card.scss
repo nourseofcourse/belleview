@@ -1,60 +1,125 @@
 .card {
+  text-align: center;
+  max-width: 911px;
 
+  
+  @media(max-width: 992px) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
 }
 
-    .card__body {
-      background: $tan;
+.card--col-2 {
+  width: 50%;
+  float: left;
+  padding: 2.5px;
 
-      padding: 37px 25px;
+  &:first-child {
+    padding-left: 0;
+  }
 
-      @media(max-width: $screen-xs-max)  {
-        padding: 18px 12px;
-      }
+  &:last-child {
+    padding-right: 0;
+  }
 
-    }
+  @media (max-width: 992px) {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
-    .card__title {
-      margin-top: 0;
-      margin-bottom: 5px;
+.card--col-3 {
+  width: 33.3333333333%;
+  float: left;
+  padding: 2.5px;
 
-      @media(max-width: $screen-xs-max)  {
-        margin-bottom: 2.5px;
-      }
-    }
+  &:first-child {
+    padding-left: 0;
+  }
 
-      .card__title--single {
-        word-spacing: 10000px;
-      }
+  &:last-child {
+    padding-right: 0;
+  }
 
-    .card__title-desc {
-      font-size: 18px;
-      line-height: 27px;
-      font-style: italic;
-      margin: 0;
-      display: block;
+  @media (max-width: 992px) {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
-       @media(max-width: $screen-xs-max)  {
-        font-size: 7px;
-        line-height: 8px;
-      }
-    }
+.card__object {
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+}
 
-    .card__link {
-      font-size: 14px;
-      line-height: 16px;
-      font-weight: bold;
-      font-style: normal;
-      font-family: 'Roboto';
-      color: #23408F;
+.card__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
-      &:hover {
-        color: $brand-green;
-        text-decoration: none;
-      }
+.card__body {
+  background: #F4F2E6;
+}
 
-      @media(max-width: $screen-xs-max)  {
-        font-size: 13px;
-        line-height: 13px;
-      }
+.card__wrap {
+  padding: 25px 25px 40px;
+}
 
-    }
+.card__title {
+  color: #444444;
+  font-size: 30px;
+  line-height: 41px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  font-family: 'Cardo';
+
+  @media(min-width: 992px) and (max-width: 1210px) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.card__copy {
+  font-size: 22px;
+  font-famly: 'Cardo';
+  line-height: 30px;
+  color: #444444;
+  margin-bottom: 0;
+  
+  &--italic {
+    font-style: italic;
+  }
+
+  @media(min-width: 992px) and (max-width: 1210px) {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 0px;
+  }
+}
+
+.card__link {
+  color: #23408F;
+  font-family: 'Roboto';
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 15px;
+  display: block;
+  transition: color .3s ease-in-out;
+  
+  &:hover {
+    text-decoration: none;
+    color: #006b36;
+  }
+}

@@ -1,0 +1,124 @@
+@import 'bourbon';
+
+body {
+  background: #fff;
+  margin: 50px 0;
+}
+.hor-card {
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include flex(0 1 auto);
+  @include align-items(center);
+  @include justify-content(center);
+  background: #F4F2E6;
+  margin-bottom: 90px;
+  
+  @media(max-width:992px) {
+    @include flex-direction(column);
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+}
+
+@media(max-width: 992px) {
+  .hor-card--reverse {
+    @include flex-direction(column-reverse);
+  } 
+}
+
+.hor-card--center {
+  text-align: center;
+}
+
+.hor-card__object {
+  @include flex-basis(40%);
+  max-width: 40%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  .hor-card--wide & {
+    max-width: 55%;
+    @include flex-basis(55%);
+  }
+  @media(max-width: 992px) {
+    max-width: 100%;
+    @include flex-basis(100%);
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    
+    .hor-card--wide & {
+      max-width: 100%;
+      @include flex-basis(1000%);
+    }
+  }
+}
+.hor-card__body {
+  @include flex-basis(60%);
+  max-width: 60%;
+  
+  .hor-card--wide & {
+    max-width: 45%;
+    @include flex-basis(45%);
+  }
+  
+  @media(max-width: 992px) {
+    max-width: 100%;
+    @include flex-basis(100%);
+    
+    .hor-card--wide & {
+      max-width: 100%;
+      @include flex-basis(100%);
+    }
+  }
+}
+
+.hor-card__wrap {
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  
+  .hor-card--wide & {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  @media(max-width: 992px) {
+    max-width: initial;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+}
+
+.hor-card__title {
+  font-size: 34px;
+  line-height: 44px;
+  font-family: 'Cardo';
+  color: #666666;
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.hor-card__copy {
+  font-size: 16px;
+  line-height: 26px;
+  color: #666666;
+  font-family: 'Cardo';
+  margin-bottom: 0;
+}
+
+.hor-card__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

@@ -11,8 +11,8 @@ module.exports = function () {
 		},
     // watch html files, only used for live reload
     html: {
-      files: ['<%= config.app %>/*.html'],
-      tasks: []
+      files: ['<%= config.source.template %>/pages/*','<%= config.source.template %>/layouts/*', '<%= config.source.template %>/partials/**/*','<%= config.source.template %>/data/*'],
+      tasks: [ 'assemble', 'notify:watch' ]
     },
     typescript: {
       files: ['<%= config.source.typescript %>/**/*.ts'],

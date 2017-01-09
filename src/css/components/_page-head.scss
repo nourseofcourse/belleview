@@ -38,3 +38,145 @@
     line-height: 44px;
     margin-top: 0;
   }
+
+  .page-head--inner {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 48.95%;
+
+    @media (min-width: $screen-sm-min) {
+      padding-bottom: 31.25%;
+
+    }
+  }
+
+  .page-head--mid-rise {
+    background-image: url(../images/mid-rise-header.jpg);
+
+    @include retina {
+      background-image: url(../images/mid-rise-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/mid-rise-head-xlg.jpg);
+    }
+  }
+
+  .page-head--location {
+    background-image: url(../images/location-header.jpg);
+    background-position: top right;
+
+    @include retina {
+      background-image: url(../images/location-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/location-header-xlg.jpg);
+    }
+  }
+
+  .page-head--thank-you {
+    background-image: url(../images/page-headers/thank-you-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/thank-you-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/thank-you-header-xlg.jpg);
+    }
+  }
+
+  .page-head--the-inn {
+    background-image: url(../images/page-headers/the-inn-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/the-inn-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/the-inn-header-xlg.jpg);
+    }
+  }
+
+  .page-head--community {
+    background-image: url(../images/page-headers/community-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/community-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/community-header-xlg.jpg);
+    }
+  }
+
+  .page-head--club {
+    background-image: url(../images/page-headers/club-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/club-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/club-header-xlg.jpg);
+    }
+  }
+
+  .page-head--carriage {
+    background-image: url(../images/page-headers/carriage-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/carriage-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/carriage-header-xlg.jpg);
+    }
+  }
+
+  .page-head--about {
+    background-image: url(../images/page-headers/about-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/about-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/about-header-xlg.jpg);
+    }
+  }
+
+  .page-head--contact {
+    background-image: url(../images/page-headers/contact-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/contact-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/contact-header-xlg.jpg);
+    }
+  }
+
+  .page-head--home {
+    background-image: url(../images/page-headers/home-header.jpg);
+    background-position: bottom right;
+    padding-bottom: 40.01%;
+
+    @include retina {
+      background-image: url(../images/page-headers/home-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/home-header-xlg.jpg);
+    }
+  }

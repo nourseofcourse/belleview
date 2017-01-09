@@ -113,7 +113,7 @@ $w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}
 					var lname = $('#last-name').val();
 					var comment = $('#comment').val();
 					var button = $(this).find('button');
-					var endpoint = window.location.protocol + window.location.hostname + '/lib/submit.php';
+					var endpoint = '/lib/submit.php';
 					$.ajax({
 						url: endpoint,
 						type: 'post',
@@ -139,6 +139,40 @@ $w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}
 						}
 					});
 				});
+
+        $('.form--contact-page').on('submit', function(e) {
+          e.preventDefault();
+          var email = $('#email').val();
+          var fname = $('#first-name').val();
+          var lname = $('#last-name').val();
+          var comment = $('#comment').val();
+          var phone = $('#phone').val();
+          var button = $(this).find('button');
+          var endpoint = '/lib/submit-contact.php';
+          $.ajax({
+            url: endpoint,
+            type: 'post',
+            data: {
+              email: email,
+              fname: fname,
+              lname: lname,
+              comment: comment,
+              phone: phone
+            },
+            beforeSend: function() {
+              button.attr('disabled', true);
+            },
+            success: function( response ) {
+              if(response.success) {
+                window.location.href = '/thank-you';
+
+              }
+            },
+            complete: function() {
+              button.attr('disabled', false);
+            }
+          });
+        });
 
         $("img.lazy").unveil(300);
 		}();

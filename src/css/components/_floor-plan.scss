@@ -1,0 +1,54 @@
+.floor-plan {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 0;
+}
+
+  .floor-plan__content {
+    position: absolute;
+    bottom: 120px;
+    left: 600px;
+    text-align: left;
+    max-width: 365px;
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      left: 500px;
+      bottom: 50px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      left: 400px;
+      bottom: 0px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      position: relative;
+      left: inherit;
+      bottom: inherit;
+      text-align: center;
+      margin: 25px auto 0;
+    }
+  }
+
+  .floor-plan__title {
+    font-size: 22px;
+    line-height: 30px;
+    color: #444444;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .floor-plan__copy {
+    font-size: 16px;
+    line-height: 26px;
+    color: #666666;
+    margin-bottom: 15px;
+  }
+
+  .floor-plan__link {
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 700;
+  }

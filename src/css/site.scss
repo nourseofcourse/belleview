@@ -16,6 +16,7 @@
 @import "settings/colors";
 @import "settings/variables";
 @import "settings/glyphicons";
+@import "bourbon/bourbon";
 
 // Tools
 @import "tools/mixins";
@@ -74,6 +75,9 @@
 @import "components/product";
 @import "components/gallary";
 @import "components/nav";
+@import "components/feature-list";
+@import "components/hor-card";
+@import "components/floor-plan";
 
 // Components
 @import "themes/theme";

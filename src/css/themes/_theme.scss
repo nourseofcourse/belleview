@@ -52,6 +52,11 @@ p {
   }
 }
 
+.wrapper,
+.navbar {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .setting-position {
   position: relative;
   left: -100px;
@@ -61,6 +66,16 @@ p {
     right: 0; 
     bottom: 150px;
     top: inherit;
+  }
+}
+
+.row--padded {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media( max-width: $screen-sm-max) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 

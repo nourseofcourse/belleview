@@ -1,0 +1,35 @@
+.feature {
+  text-align: left;
+  background-color: #F4F2E6;
+  height: 100%;
+  padding: 53px 0 86px;
+  @include display(flex);
+  @include justify-content(center);
+}
+
+.feature--left {
+  @media (max-width: $screen-sm-max) {
+    padding-bottom: 16px;
+  }
+}
+
+.feature--right {
+  @media (max-width: $screen-sm-max) {
+    padding-top: 0px;
+  }
+}
+
+
+
+
+.feature__item {
+  font-size: 16px;
+  line-height: 26px;
+  color: #666666;
+  max-width: 332px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

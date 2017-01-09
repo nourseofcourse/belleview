@@ -27,6 +27,10 @@
 }
 
 
+  .band--floor-plan {
+    padding: 90px 0 160px;
+  }
+
   .band--small {
     padding: $band-small-vertical-padding 0;
 
@@ -52,6 +56,11 @@
   .band__text--max {
     max-width: 770px;
     margin: 0 auto;
+  }
+
+  .band__text--large {
+    font-size: 22px;
+    line-height: 30px;
   }
 
   .band__text--the-move {
