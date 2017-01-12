@@ -35,10 +35,10 @@
 </head>
 <body>  <div class="wrapper">  
     
-  <nav role="navigation" class="navbar  navbar-default  navbar-fixed-top">
+  <nav class="navbar navbar-default  navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <div class="button_container  hidden-md  hidden-lg navbar-toggle collapsed" id="toggle">
+        <div class="button_container  hidden-lg navbar-toggle collapsed" id="toggle">
           <span class="top"></span>
           <span class="middle"></span>
           <span class="bottom"></span>
@@ -47,20 +47,44 @@
           <img src="assets/images/belleview-logo.png" alt="Bellview Place luxury condos homes gated community">
         </a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
+  
+      <div id="navbar" class="navbar-collapse collapse in" id="bs-megadropdown-tabs">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/location">location</a></li>
-          <li><a href="/mid-rise">residences</a></li>
-          <li><a href="/club-amenities">amenities</a></li>
+          <li><a href="/site-plan">site plan</a></li>
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">residences<span class="caret"></span></a>
+            <div id="filters" class="dropdown-menu mega-dropdown-menu">
+              <div class="container-fluid2">
+                <ul class="nav-list list-inline">
+                  <li><a href="/mid-rise"><img src="assets/images/mid-rise-nav.jpg"><span>MID-RISE RESIDENCES</span></a></li>
+                  <li><a href="/carriage-homes"><img src="assets/images/carriage-nav.jpg"><span>CARRIAGE HOMES</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">amenities<span class="caret"></span></a>
+            <div id="filters" class="dropdown-menu mega-dropdown-menu">
+              <div class="container-fluid2">
+                <ul class="nav-list list-inline">
+                  <li><a href="/community-amenities"><img src="assets/images/community-nav.jpg"><span>COMMUNITY AMENITIES</span></a></li>
+                  <li><a href="/club-amenities"><img src="assets/images/club-nav.jpg"><span>CLUB AMENITIES</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
           <li><a href="/the-inn">inn</a></li>
-          <!--<li><a href="/news">news & photos</a></li>-->
+          <li><a href="/news">news & photos</a></li>
           <li><a href="/about-jmc">about jmc</a></li>
           <li><a href="/contact">contact us</a></li>
           <!--<li><span class="navbar-btn"><a href="" class="button  button--primary   button--outline  button--padded"></a></span></li>-->
         </ul>
       </div><!--/.nav-collapse -->
-    </div>
+  
+    </div><!-- /.container-fluid -->
   </nav>
+
   <main class="content" role="main">
     <header class="page-head  page-head--inner  page-head--club" role="banner"></header>    <section class="band  band--small  band--tint">
       <div class="container">
@@ -146,7 +170,7 @@
                 </div>
               </div>
               <div class="hor-card__object"  data-mh="card">
-                <img src="assets/images/card-images/club-sports.jpg" class="hor-card__image">
+                <img src="assets/images/card-images/tennis.jpg" class="hor-card__image">
               </div>
             </div>
           </div>
@@ -160,7 +184,7 @@
             <div class="hor-card">
     
               <div class="hor-card__object" data-mh="card">
-                <img src="assets/images/card-images/club-swimming.jpg" class="hor-card__image">
+                <img src="assets/images/card-images/swimming-2.jpg" class="hor-card__image">
               </div>
               <div class="hor-card__body" data-mh="card">
                 <div class="hor-card__wrap">
@@ -194,7 +218,7 @@
                     <input type="email" class="form-control  form__input" id="email" required>
                   </div>
                   <div class="form__group">
-                    <label class="form__label" for="first-name">Comments/Enquiries</label>
+                    <label class="form__label" for="first-name">How can we help you?</label>
                     <textarea class="form-control  form__input  form__textarea" rows="5" id="comment"></textarea>
                   </div>
                   <div class="form__group">
@@ -225,13 +249,16 @@
   <div class="overlay" id="overlay">
     <nav class="overlay-menu">
       <ul>
-        <li><a href="/location">location</a></li>
-        <li><a href="/mid-rise">residences</a></li>
-        <li><a href="/club-amenities">amenities</a></li>
-        <li><a href="/the-inn">inn</a></li>
-        <!--<li><a href="/news">news & photos</a></li>-->
-        <li><a href="/about-jmc">about jmc</a></li>
-        <li><a href="/contact">contact us</a></li>
+        <li><a href="/location">Location</a></li>
+        <li><a href="/site-plan">Site Plan</a></li>
+        <li><a href="/mid-rise">Mid-rise Residences</a></li>
+        <li><a href="/carriage-homes">Carriage Homes</a></li>
+        <li><a href="/community-amenities">Community Amenities</a></li>
+        <li><a href="/club-amenities">Club Amenities</a></li>
+        <li><a href="/the-inn">Belleview Inn</a></li>
+        <li><a href="/news">News & Photos</a></li>
+        <li><a href="/about-jmc">About JMC</a></li>
+        <li><a href="/contact">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -239,7 +266,41 @@
   
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnbUCc95DCXKnlWAcJK-gLsNt4__JO4u0"></script>
   
-  <script type="text/javascript" src="assets/js/site.js"></script>  </div>
+  <script type="text/javascript" src="assets/js/site.js"></script>
+  <script>
+      $(function() {
+        // Thanks to Mark Avery
+        // http://stackoverflow.com/questions/8191015/how-do-i-lay-out-my-content-divs-in-a-similar-manner-to-facebook-timeline
+        var adjustArticleHeights = (function () {
+          var leftColumnHeight = 0,
+            rightColumnHeight = 0,
+            $articles = $('section article');
+          for (var i = 0; i < $articles.length; i++) {
+            // This just adds random heights to articles
+            
+            if (leftColumnHeight > rightColumnHeight) {
+              rightColumnHeight += $articles.eq(i).addClass('right').outerHeight(true);
+            } else {
+              leftColumnHeight += $articles.eq(i).outerHeight(true);
+            }
+          }
+          return $articles;
+        })();
+      });
+  
+      $(document).ready(function(){
+          $(".dropdown").hover(            
+              function() {
+                  $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+                  $(this).toggleClass('open');        
+              },
+              function() {
+                  $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+                  $(this).toggleClass('open');       
+              }
+          );
+      });
+    </script>  </div>
 
 </body>
 </html>

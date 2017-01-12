@@ -180,3 +180,29 @@
       background-image: url(../images/page-headers/home-header-xlg.jpg);
     }
   }
+
+  .page-head--mid-rise {
+    background-image: url(../images/page-headers/mid-rise-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/mis-rise-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/mid-ride-header-xlg.jpg);
+    }
+  }
+
+  .page-head--news {
+    background-image: url(../images/page-headers/news-header.jpg);
+    background-position: bottom right;
+
+    @include retina {
+      background-image: url(../images/page-headers/news-header@2x.jpg);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: url(../images/page-headers/news-header-xlg.jpg);
+    }
+  }

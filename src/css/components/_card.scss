@@ -9,6 +9,24 @@
   }
 }
 
+.card--news {
+  text-align: left;
+  margin-bottom: 30px;
+  @media(min-width: $screen-md-min) {
+    display: block;
+    width: 49%;
+    margin: 0 0 2%;
+    background: #999;
+    float: left;
+    clear: left;
+
+    &.right {
+      float: right;
+      clear: right;
+    }
+  }
+}
+
 .card--col-2 {
   width: 50%;
   float: left;
@@ -72,6 +90,10 @@
 
 .card__wrap {
   padding: 25px 25px 40px;
+
+  .card--news & {
+    padding: 80px 70px;
+  }
 }
 
 .card__title {
@@ -107,6 +129,15 @@
   }
 }
 
+.card__date {
+  color: #444444;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 30px;
+  display: block;
+}
+
 .card__link {
   color: #23408F;
   font-family: 'Roboto';
@@ -121,5 +152,9 @@
   &:hover {
     text-decoration: none;
     color: #006b36;
+  }
+
+  .card--news & {
+    margin-top: 30px;
   }
 }

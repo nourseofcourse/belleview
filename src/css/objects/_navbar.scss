@@ -23,7 +23,7 @@
 // styling of responsive aspects.
 .navbar-header {
   @include clearfix;
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $screen-md-max) {
     float: left;
   }
 }
@@ -187,7 +187,7 @@
   .icon-bar + .icon-bar {
     margin-top: 4px;
   }
-  @media (min-width: $grid-float-breakpoint) {
+  @media (min-width: $screen-md-max) {
     display: none;
   }
 }
