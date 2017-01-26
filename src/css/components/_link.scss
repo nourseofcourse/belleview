@@ -1,0 +1,13 @@
+.link {
+  font-weight: bold;
+  font-family: 'Roboto';
+  font-style: 14px;
+  color: #23408F;
+  line-height: 16px;
+  margin-top: 30px;
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
