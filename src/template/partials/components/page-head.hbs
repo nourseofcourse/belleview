@@ -1,15 +1,33 @@
-<header class="page-head  {{#if inner}}page-head--inner{{/if}}  page-head--{{ class }}" role="banner">
-{{#if homepage-text}}
+<header class="page-head  {{#if inner}}page-head--inner{{/if}} {{#if inner-new}}page-head--inner-new{{/if}}  page-head--{{ class }}" role="banner">
+{{#if content-text}}
   <div class="container">
     <div class="row">
       <div class="col-lg-4  col-md-5  col-sm-6  hidden-xs">
         <div class="page-head__content  hidden-xs">
           <div class="box  box--outline  box--small">
             <div class="box__header">
-              <h1 class="page-head__headline">History.  Lifestyle.  Location.</h1>
+              <h1 class="page-head__headline">{{ content-text }}</h1>
             </div>
             <div class="box__content">
-              <a href="#contact" data-plugin="scrollTo" class="button  button--primary">learn more</a>
+              <a href="{{ content-link }}" data-plugin="scrollTo" class="button  button--primary">{{ content-link-text }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
+{{#if content-right-text}}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4  col-lg-offset-8  col-md-5  col-md-offset-7 col-sm-6  col-sm-offset-6  hidden-xs">
+        <div class="page-head__content  hidden-xs">
+          <div class="box  box--outline  box--small">
+            <div class="box__header">
+              <h1 class="page-head__headline">{{ content-right-text }}</h1>
+            </div>
+            <div class="box__content">
+              <a href="{{ content-link }}" data-plugin="scrollTo" class="button  button--primary">{{ content-link-text }}</a>
             </div>
           </div>
         </div>
