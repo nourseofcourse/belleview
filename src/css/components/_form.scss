@@ -7,6 +7,7 @@
       border-radius: 0;
       padding: 9px 12px;
       color:#666;
+      font-family: 'Roboto';
 
       &:focus,
       &:active {
@@ -14,6 +15,14 @@
         outline: none;
         box-shadow: none;
       }
+    }
+
+    .form__break {
+      display: block;
+    }
+
+    .form__radio {
+      display: inline-block;
     }
 
     .form__label {

@@ -4,8 +4,8 @@ $email = $_POST['email'];
 $lastName = $_POST['lname'];
 $firstName = $_POST['fname'];
 $comment = $_POST['comment'];
-$phone = $_POST['phone'];
-
+$reference = $_POST['reference'];
+$broker = $_POST['broker'];
 $response = array(
   'message' => 'Error submitting your message. Please try again.',
   'success' => false
@@ -33,6 +33,8 @@ if( !empty( $email ) && !empty( $lastName ) && !empty( $firstName ) ) {
   <h3>New Belleview Place contact form message from ' . $firstName . ' ' . $lastName . '.</h3>
   <p>' . $comment .'</p>
   <p>You can reply to ' . $firstName . ' at ' . $email . ' or ' . $phone . '</p>
+  <p>Broker: ' . $broker . '</p>
+  <p>Heard from you: ' . $reference . '</p>
 </div>
 </body>
 </html>

@@ -30,6 +30,26 @@
                   <label class="form__label" for="first-name">Comments/Enquiries</label>
                   <textarea class="form-control  form__input  form__textarea" rows="5" id="comment"></textarea>
                 </div>
+                <div class="form__row">
+                  <div class="form__group">
+                    <label class="form__label" for="reference">How did you hear about Belleview Place?</label>
+                    <select name="reference" class="form__input  form-control" id="reference">
+                      <option value="" disabled selected>Select one</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="online">Online</option>
+                      <option value="billboard">Billboard</option>
+                      <option value="newspaper">Newspaper</option>
+                      <option value="magazine">Magazine</option>
+                      <option value="signage">Signage</option>
+                    </select>
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label" for="broker">Are you a broker?</label>
+                    <div class="form__break">
+                      <input type="radio" name="broker" value="yes" class="form__radio"> Yes <input type="radio" name="broker" value="no" class="form__radio"> No
+                    </div>
+                  </div>
+                </div>
                 <div class="form__group">
                   <button type="submit" class="button  button--primary">SUBMIT</button>
                 </div>

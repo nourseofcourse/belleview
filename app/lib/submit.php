@@ -3,6 +3,7 @@
 $email = $_POST['email'];
 $lastName = $_POST['lname'];
 $firstName = $_POST['fname'];
+$phone = $_POST['phone'];
 $comment = $_POST['comment'];
 
 $response = array(
@@ -31,7 +32,7 @@ if( !empty( $email ) && !empty( $lastName ) && !empty( $firstName ) ) {
 <div style="width: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 11px;">
   <h3>New Belleview Place contact form message from ' . $firstName . ' ' . $lastName . '.</h3>
   <p>' . $comment .'</p>
-  <p>You can reply to ' . $firstName . ' at ' . $email . '</p>
+  <p>You can reply to ' . $firstName . ' at ' . $email . ' or ' . $phone . '</p>
 </div>
 </body>
 </html>
