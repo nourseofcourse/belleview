@@ -63,6 +63,9 @@ $w.on("scroll.unveil resize.unveil lookup.unveil",unveil);unveil();return this}}
 									google.maps.event.trigger(myMap, 'resize');
 									map.setCenter(pos); // Add this line to recentre the map
 								}
+                window.addListener('zoom_changed', function() {
+                  map.setCenter(pos); // Add this line to recentre the map
+                });
             }
 			$('[data-plugin="scrollTo"]').on('click', function(e) {
 				e.preventDefault();

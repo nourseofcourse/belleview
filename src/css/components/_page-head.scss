@@ -33,14 +33,14 @@
   .page-head__content {
     top: 65px;
     position: absolute;
-    max-width: 270px;
+    max-width: 240px;
 
     .box {
       background: rgba(245,245,245, .85);
     }
 
     .box--small {
-      padding: 40px;
+      padding: 20px;
     }
 
     @media(max-width: 960px) {
